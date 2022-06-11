@@ -14,7 +14,7 @@
             margin-top: 12px;
             color: lightblue;
             /* width: 40%; */
-            height: 250px;
+            height: 400px;
         }
 
         input {
@@ -25,6 +25,26 @@
 
         button {
             margin-top: 64px;
+        }
+
+        input[type="button"] {
+            margin-top: 24px;
+            background-color: orange;
+        }
+
+        input[type="reset"] {
+            background-color: orange;
+        }
+
+        #result {
+            background-color: aqua;
+            width: 50%;
+            margin: 0 auto;
+            height: 100px;
+            color: black;
+            font-size: 24px;
+            line-height: 100px;
+            border-radius: 12px;
         }
     </style>
 
@@ -39,10 +59,16 @@
             <label for="name">體重</label>
             <input type="number" step="0.1" name="weight" id="weight" required><br>
             <br>
-            <button type="submit">計算</button>
+            <div id="result">
+                BMI:<span class="bmi"></span>
+            </div>
+
+            <input type="button" id="calc" value="計算"></button>
+            <input type="reset" value="重設"></button>
         </form>
         <a href="./index.html">返回首頁</a>
     </div>
+    <script src="./js/bmi.js"></script>
 </body>
 
 </html>
